@@ -1,0 +1,169 @@
+<robot name = "robot">
+    <link name="Central">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0.62"/>
+            <mass value="1.0" />
+            <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0.62"/>
+            <geometry>
+                <mesh filename="RhomDoDeca_mm v9.stl" scale="0.1 0.1 0.1" />
+            </geometry>
+            <material name="Sensor">
+                <color rgba="0.239 0.875 0.282 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="RhomDoDeca_mm v9.stl" scale="0.1 0.1 0.1" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Central_FrontOne" type="fixed">
+       <parent link="Central"/>
+       <child  link="FrontOne"/>
+       <origin rpy="0 0 0" xyz="0 4.086 0" />
+       <axis xyz="0 1 0"/>
+       <limit effort="0.0" lower="-3.14159" upper="3.14159" velocity="0.0"/>
+    </joint>
+    <link name="FrontOne">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0.62"/>
+            <mass value="1.0" />
+            <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0.62"/>
+            <geometry>
+                <mesh filename="RhomDoDeca_mm v9.stl" scale="0.1 0.1 0.1" />
+            </geometry>
+            <material name="Sensor">
+                <color rgba="0.239 0.875 0.282 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="RhomDoDeca_mm v9.stl" scale="0.1 0.1 0.1" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Central_UpperOne" type="fixed">
+       <parent link="Central"/>
+       <child  link="UpperOne"/>
+       <origin rpy="0 0 0" xyz="0 0 4.086" />
+       <axis xyz="0 0 1"/>
+       <limit effort="0.0" lower="-3.14159" upper="3.14159" velocity="0.0"/>
+    </joint>
+    <link name="UpperOne">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0.62"/>
+            <mass value="1.0" />
+            <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0.62"/>
+            <geometry>
+                <mesh filename="RhomDoDeca_mm v9.stl" scale="0.1 0.1 0.1" />
+            </geometry>
+            <material name="Sensor">
+                <color rgba="0.239 0.875 0.282 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="RhomDoDeca_mm v9.stl" scale="0.1 0.1 0.1" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="UpperOne_UpperTwo" type="fixed">
+       <parent link="UpperOne"/>
+       <child  link="UpperTwo"/>
+       <origin rpy="0 0 0" xyz="0 4.086 0" />
+       <axis xyz="0 1 0"/>
+       <limit effort="0.0" lower="-3.14159" upper="3.14159" velocity="0.0"/>
+    </joint>
+    <link name="UpperTwo">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0.62"/>
+            <mass value="1.0" />
+            <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0.62"/>
+            <geometry>
+                <mesh filename="RhomDoDeca_mm v9.stl" scale="0.1 0.1 0.1" />
+            </geometry>
+            <material name="Sensor">
+                <color rgba="0.239 0.875 0.282 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="RhomDoDeca_mm v9.stl" scale="0.1 0.1 0.1" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Central_Middle" type="fixed">
+       <parent link="Central"/>
+       <child  link="Middle"/>
+       <origin rpy="0 0 0" xyz="2.88 2.043 2.043" />
+       <axis xyz="1 1 1"/>
+       <limit effort="0.0" lower="-3.14159" upper="3.14159" velocity="0.0"/>
+    </joint>
+    <link name="Middle">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0.62"/>
+            <mass value="1.0" />
+            <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0.62"/>
+            <geometry>
+                <mesh filename="RhomDoDeca_mm v9.stl" scale="0.1 0.1 0.1" />
+            </geometry>
+            <material name="Sensor">
+                <color rgba="0.239 0.875 0.282 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="RhomDoDeca_mm v9.stl" scale="0.1 0.1 0.1" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Middle_LowerRight" type="fixed">
+       <parent link="Middle"/>
+       <child  link="LowerRight"/>
+       <origin rpy="0 0 0" xyz="2.88 -2.043 -2.043" />
+       <axis xyz="1 1 1"/>
+       <limit effort="0.0" lower="-3.14159" upper="3.14159" velocity="0.0"/>
+    </joint>
+    <link name="LowerRight">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0.62"/>
+            <mass value="1.0" />
+            <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0.62"/>
+            <geometry>
+                <mesh filename="RhomDoDeca_mm v9.stl" scale="0.1 0.1 0.1" />
+            </geometry>
+            <material name="Sensor">
+                <color rgba="0.239 0.875 0.282 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="RhomDoDeca_mm v9.stl" scale="0.1 0.1 0.1" />
+            </geometry>
+        </collision>
+    </link>
+</robot>
