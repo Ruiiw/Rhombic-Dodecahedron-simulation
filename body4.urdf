@@ -1,5 +1,5 @@
 <robot name = "robot">
-    <link name="Central">
+    <link name="zero0">
         <inertial>
             <origin xyz="0 0 0" rpy="0 0 0.62"/>
             <mass value="1" />
@@ -21,14 +21,246 @@
             </geometry>
         </collision>
     </link>
-    <joint name="Central_FrontOne" type="fixed">
-       <parent link="Central"/>
-       <child  link="FrontOne"/>
+    <joint name="zero0_zero1" type="fixed">
+       <parent link="zero0"/>
+       <child  link="zero1"/>
        <origin rpy="0 0 0" xyz="0 4.086 0" />
        <axis xyz="0 1 0"/>
        <limit effort="0.0" lower="-3.14159" upper="3.14159" velocity="0.0"/>
     </joint>
-    <link name="FrontOne">
+    <link name="zero1">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0.62"/>
+            <mass value="1" />
+            <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0.62"/>
+            <geometry>
+             <mesh filename="RhomDoDeca_mm v9.stl" scale="0.1 0.1 0.1" />
+            </geometry>
+            <material name="Cyan">
+                <color rgba="0 1.0 1.0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0.62"/>
+            <geometry>
+             <mesh filename="RhomDoDeca_mm v9.stl" scale="0.1 0.1 0.1" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="zero1_zero2" type="fixed">
+       <parent link="zero1"/>
+       <child  link="zero2"/>
+       <origin rpy="0 0 0" xyz="0 4.086 0" />
+       <axis xyz="0 1 0"/>
+       <limit effort="0.0" lower="-3.14159" upper="3.14159" velocity="0.0"/>
+    </joint>
+    <link name="zero2">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0.62"/>
+            <mass value="1" />
+            <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0.62"/>
+            <geometry>
+             <mesh filename="RhomDoDeca_mm v9.stl" scale="0.1 0.1 0.1" />
+            </geometry>
+            <material name="Cyan">
+                <color rgba="0 1.0 1.0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0.62"/>
+            <geometry>
+             <mesh filename="RhomDoDeca_mm v9.stl" scale="0.1 0.1 0.1" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="zero2_zero3" type="fixed">
+       <parent link="zero2"/>
+       <child  link="zero3"/>
+       <origin rpy="0 0 0" xyz="0 4.086 0" />
+       <axis xyz="0 1 0"/>
+       <limit effort="0.0" lower="-3.14159" upper="3.14159" velocity="0.0"/>
+    </joint>
+    <link name="zero3">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0.62"/>
+            <mass value="1" />
+            <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0.62"/>
+            <geometry>
+             <mesh filename="RhomDoDeca_mm v9.stl" scale="0.1 0.1 0.1" />
+            </geometry>
+            <material name="Cyan">
+                <color rgba="0 1.0 1.0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0.62"/>
+            <geometry>
+             <mesh filename="RhomDoDeca_mm v9.stl" scale="0.1 0.1 0.1" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="zero3_half3half" type="fixed">
+       <parent link="zero3"/>
+       <child  link="half3half"/>
+       <origin rpy="0 0 0" xyz="2.88 -2.043 2.043" />
+       <axis xyz="0 1 0"/>
+       <limit effort="0.0" lower="-3.14159" upper="3.14159" velocity="0.0"/>
+    </joint>
+    <link name="half3half">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0.62"/>
+            <mass value="1" />
+            <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0.62"/>
+            <geometry>
+             <mesh filename="RhomDoDeca_mm v9.stl" scale="0.1 0.1 0.1" />
+            </geometry>
+            <material name="Cyan">
+                <color rgba="0 1.0 1.0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0.62"/>
+            <geometry>
+             <mesh filename="RhomDoDeca_mm v9.stl" scale="0.1 0.1 0.1" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="half3half_half2half" type="fixed">
+       <parent link="half3half"/>
+       <child  link="half2half"/>
+       <origin rpy="0 0 0" xyz="0 -4.086 0" />
+       <axis xyz="0 1 0"/>
+       <limit effort="0.0" lower="-3.14159" upper="3.14159" velocity="0.0"/>
+    </joint>
+    <link name="half2half">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0.62"/>
+            <mass value="1" />
+            <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0.62"/>
+            <geometry>
+             <mesh filename="RhomDoDeca_mm v9.stl" scale="0.1 0.1 0.1" />
+            </geometry>
+            <material name="Cyan">
+                <color rgba="0 1.0 1.0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0.62"/>
+            <geometry>
+             <mesh filename="RhomDoDeca_mm v9.stl" scale="0.1 0.1 0.1" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="half2half_half1half" type="fixed">
+       <parent link="half2half"/>
+       <child  link="half1half"/>
+       <origin rpy="0 0 0" xyz="0 -4.086 0" />
+       <axis xyz="0 1 0"/>
+       <limit effort="0.0" lower="-3.14159" upper="3.14159" velocity="0.0"/>
+    </joint>
+    <link name="half1half">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0.62"/>
+            <mass value="1" />
+            <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0.62"/>
+            <geometry>
+             <mesh filename="RhomDoDeca_mm v9.stl" scale="0.1 0.1 0.1" />
+            </geometry>
+            <material name="Cyan">
+                <color rgba="0 1.0 1.0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0.62"/>
+            <geometry>
+             <mesh filename="RhomDoDeca_mm v9.stl" scale="0.1 0.1 0.1" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="half1half_half0half" type="fixed">
+       <parent link="half1half"/>
+       <child  link="half0half"/>
+       <origin rpy="0 0 0" xyz="0 -4.086 0" />
+       <axis xyz="0 1 0"/>
+       <limit effort="0.0" lower="-3.14159" upper="3.14159" velocity="0.0"/>
+    </joint>
+    <link name="half0half">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0.62"/>
+            <mass value="1" />
+            <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0.62"/>
+            <geometry>
+             <mesh filename="RhomDoDeca_mm v9.stl" scale="0.1 0.1 0.1" />
+            </geometry>
+            <material name="Cyan">
+                <color rgba="0 1.0 1.0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0.62"/>
+            <geometry>
+             <mesh filename="RhomDoDeca_mm v9.stl" scale="0.1 0.1 0.1" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="half0half_one0" type="fixed">
+       <parent link="half0half"/>
+       <child  link="one0"/>
+       <origin rpy="0 0 0" xyz="2.88 2.043 -2.043" />
+       <axis xyz="0 1 0"/>
+       <limit effort="0.0" lower="-3.14159" upper="3.14159" velocity="0.0"/>
+    </joint>
+    <link name="one0">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0.62"/>
+            <mass value="1" />
+            <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0.62"/>
+            <geometry>
+             <mesh filename="RhomDoDeca_mm v9.stl" scale="0.1 0.1 0.1" />
+            </geometry>
+            <material name="Cyan">
+                <color rgba="0 1.0 1.0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0.62"/>
+            <geometry>
+             <mesh filename="RhomDoDeca_mm v9.stl" scale="0.1 0.1 0.1" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="one0_one1" type="fixed">
+       <parent link="one0"/>
+       <child  link="one1"/>
+       <origin rpy="0 0 0" xyz="0 4.086 0" />
+       <axis xyz="0 1 0"/>
+       <limit effort="0.0" lower="-3.14159" upper="3.14159" velocity="0.0"/>
+    </joint>
+    <link name="one1">
         <inertial>
             <origin xyz="0 0 0" rpy="0 0 0.62"/>
             <mass value="1" />
